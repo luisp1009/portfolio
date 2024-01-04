@@ -1,0 +1,100 @@
+nav{
+    font-size: 25px;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+  }
+  
+  body {
+    height: 100vh;
+    cursor: none;
+    background-color: black;
+    width: 100vw;
+    overflow-x: hidden;
+    cursor: auto;
+  }
+
+
+  h1{
+    font-size: 70px;
+  }
+
+  .job-title, .section-headline{
+    color: #D9B312;
+  }
+
+.bg-about{
+background-color: #1D1D25;
+padding-top: 120px;
+padding-bottom: 120px;
+}
+
+.card{
+    background-color: #1D1D25;
+    padding: 20px 0;
+}
+
+.bg-projects{
+    padding-top: 120px;
+    padding-bottom: 120px;
+    }
+
+.about-content, .project-content{
+    font-size: 20px;
+}
+ 
+input,
+input[type="text"],
+select,
+textarea {
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  resize: vertical;
+  color: white;
+  background-color: black !important;
+}
+
+input[type="submit"] {
+    background-color: #d9b310 !important;
+    color: #191919 !important;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 9px 22px;
+    border-radius: 30px;
+    transition: 0.4s;
+  }
+
+input[type="submit"]:hover {
+  background-color: transparent;
+  border: 2px solid #d9b310;
+  color: white;
+  cursor: pointer;
+}
+
+.sendBtn {
+    width: 100px;
+    height: 45px;
+    font-size: 17px;
+  }
+
+  label{
+    font-size: 20px;
+  }
+
+  .navbar-nav .nav-link.active {
+    color: #d9b310 !important;
+}
+
+
+
+
