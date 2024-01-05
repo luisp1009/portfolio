@@ -1,13 +1,19 @@
- // Get all the navigation links
- const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
- // Add a click event listener to each navigation link
- navLinks.forEach((link) => {
-   link.addEventListener("click", function (event) {
-     // Remove the 'active' class from all navigation links
-     navLinks.forEach((link) => link.classList.remove("active"));
+const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
-     // Add the 'active' class to the clicked navigation link
-     this.classList.add("active");
-   });
+navLinks.forEach((link) => {
+  link.addEventListener("click", function (event) {
+    navLinks.forEach((link) => link.classList.remove("active"));
+
+    this.classList.add("active");
+  });
+});
+
+window.addEventListener("scroll", function () {
+   var navbar = document.getElementById("navbar");
+   if (window.scrollY > 20) {
+     navbar.classList.add("scrolled");
+   } else {
+     navbar.classList.remove("scrolled");
+   }
  });
