@@ -106,8 +106,8 @@ box-shadow: 0 5px 5px rgba(217, 179, 16, 1);
   }
 .scale:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 30px rgba(217, 179, 16, 0.7); 
-
+  border: solid 2px rgba(217, 179, 16, 1);
+  z-index: 1;
 }
 
 
