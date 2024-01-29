@@ -18,32 +18,53 @@ body {
   overflow-x: hidden;
   cursor: auto;
 }
-
+.headline, .skills, .card-title{
+  color:white;
+}
 
 h1{
   font-size: 70px;
 }
 
-.job-title, .section-headline{
+.job-title, .section-headline, .section-message{
   color: #D9B312;
 }
 
-.bg-about{
+
+
+.bg-about, .bg-contact{
 background-color: #1D1D25;
+}
+
+.bg-contact{
+  padding: 60px 0;
+}
+
+.bg-projects{
+  background-color: black;
 }
 
 .card{
   background-color: #1D1D25;
   padding: 20px 0;
+  border: none;
+}
+.preview, .contact-label{
+  color:white;
 }
 
 .bg-projects {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   }
 
-.about-content, .project-content{
+.about-content, .project-content, .section-message{
   font-size: 20px;
+  color:white;
+}
+
+.separator{
+  color:white;
 }
 
 input,
@@ -58,7 +79,6 @@ margin-top: 10px;
 margin-bottom: 25px;
 resize: vertical;
 color: white;
-background-color: black !important;
 }
 
 input[type="submit"] {
@@ -114,3 +134,92 @@ box-shadow: 0 5px 5px rgba(217, 179, 16, 1);
 .nav-link.text-white:hover {
   color: #d9b310 !important;
 }
+
+/* Add this to styles.css */
+
+.mode-switch {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: black;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.mode-label {
+  margin-left: 10px;
+}
+
+/* Add this to styles.css */
+
+body.dark-mode, body.dark-mode .bg-projects{
+  background-color:white
+}
+body.dark-mode .bg-about, body.dark-mode .card-body, body.dark-mode .bg-contact {
+  background-color:#ECE8DD;
+}
+
+body.dark-mode .headline, body.dark-mode .skills,  body.dark-mode .about-content, body.dark-mode .card-title, body.dark-mode .project-content, body.dark-mode .preview, body.dark-mode .contact-label, body.dark-mode .section-message, body.dark-mode .separator{
+  color: black;
+}
+
+
+
+
+
+

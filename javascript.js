@@ -18,3 +18,29 @@ window.addEventListener("scroll", function () {
    }
  });
 
+// Add this to javascript.js
+
+document.addEventListener("DOMContentLoaded", function () {
+  const darkModeToggle = document.getElementById("dark-mode-toggle");
+  const body = document.body;
+  const modeLabel = document.querySelector(".mode-label");
+
+  // Check user preference or previous selection from localStorage
+  const isDarkMode = localStorage.getItem("darkMode") === "true";
+  darkModeToggle.checked = isDarkMode;
+  body.classList.toggle("dark-mode", isDarkMode);
+
+  // Set initial label text
+  modeLabel.textContent = isDarkMode ? "Dark Mode" : "Light Mode";
+
+  // Toggle dark mode on switch change
+  darkModeToggle.addEventListener("change", function () {
+    const isDarkMode = darkModeToggle.checked;
+    body.classList.toggle("dark-mode", isDarkMode);
+    localStorage.setItem("darkMode", isDarkMode);
+
+    // Update label text
+    modeLabel.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
+    modeLabel.style.color = isDarkMode ? "black" : "white";
+  });
+});
