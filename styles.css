@@ -59,17 +59,17 @@ background-color: #1D1D25;
   }
 
 .projects-btn {
-  font-size: 20px;
-    background-color: #D9B312;
-    border-radius: 30px;
-    padding: 15px 30px;
+  font-size: 20px !important;
+    background-color: #D9B312 !important;
+    border-radius: 30px !important;
+    padding: 15px 30px !important;
 }
 
 .projects-btn:hover {
-  background-color: transparent;
-  border: 2px solid #d9b310;
+  background-color: transparent !important;
+  border: 2px solid #d9b310 !important;
   color: white;
-  cursor: pointer;
+  cursor: pointer !important;
   }
   
 .about-content, .project-content, .section-message{
@@ -97,10 +97,10 @@ color: white;
 
 input[type="submit"] {
   background-color: #d9b310 !important;
-  text-decoration: none;
-  border-radius: 30px;
-  padding: 15px 30px;
-  font-size: 20px;
+  text-decoration: none !important;
+  border-radius: 30px !important;
+  padding: 15px 30px !important;
+  font-size: 20px !important;
 }
 
 
@@ -112,11 +112,7 @@ cursor: pointer !important;
 color: #ffffff;
 }
 
-.sendBtn {
-  width: 100px;
-  height: 45px;
-  font-size: 17px;
-}
+
 
 label{
   font-size: 20px;
