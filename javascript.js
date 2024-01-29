@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("darkMode", isDarkMode);
 
     // Update label text
-    modeLabel.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
+    modeLabel.textContent = isDarkMode ? "Dark Mode" : "Light Mode";
     modeLabel.style.color = isDarkMode ? "black" : "white";
   });
 });

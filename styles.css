@@ -203,6 +203,10 @@ input:checked + .slider:before {
   margin-left: 10px;
 }
 
+.dark-mode .mode-label {
+  transform: translateX(-200%);
+}
+
 /* Add this to styles.css */
 
 body.dark-mode, body.dark-mode .bg-projects{
