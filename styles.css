@@ -130,11 +130,6 @@ font-size: 12px;
 box-shadow: 0 5px 5px rgba(217, 179, 16, 1);
 }
 
-.scale {
-  transition: transform 0.3s ease-in-out; 
-  }
-
-
 .mode-switch {
   position: fixed;
   bottom: 20px;
@@ -164,30 +159,25 @@ box-shadow: 0 5px 5px rgba(217, 179, 16, 1);
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  background: white; /* Default image for off state */
+  background-size: cover;
+  transition: background 0.4s;
 }
 
 .slider:before {
-  position: absolute;
   content: "";
+  position: absolute;
   height: 26px;
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  background: url('./images/moon1.png');
+  background-size: cover;
+  transition: transform 0.4s;
 }
 
-input:checked + .slider {
-  background-color: black;
-}
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
 
@@ -203,15 +193,21 @@ input:checked + .slider:before {
   margin-left: 10px;
 }
 
-.dark-mode .mode-label {
-  transform: translateX(-200%);
+.dark-mode .slider:before {
+  background: url('./images/sun1.png'); 
+  background-size: cover;
 }
+
 
 /* Add this to styles.css */
 
 body.dark-mode, body.dark-mode .bg-projects{
   background-color:white
 }
+body.dark-mode .slider{
+  background: black;
+}
+
 body.dark-mode .bg-about, body.dark-mode .card-body, body.dark-mode .bg-contact {
   background-color:#ECE8DD;
 }
@@ -219,7 +215,6 @@ body.dark-mode .bg-about, body.dark-mode .card-body, body.dark-mode .bg-contact 
 body.dark-mode .headline, body.dark-mode .skills,  body.dark-mode .about-content, body.dark-mode .card-title, body.dark-mode .project-content, body.dark-mode .preview, body.dark-mode .contact-label, body.dark-mode .section-message, body.dark-mode .separator, body.dark-mode .btn-form, body.dark-mode .projects-btn{
   color: black;
 }
-
 
 .card {
   position: relative;

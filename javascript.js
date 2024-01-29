@@ -30,17 +30,12 @@ document.addEventListener("DOMContentLoaded", function () {
   darkModeToggle.checked = isDarkMode;
   body.classList.toggle("dark-mode", isDarkMode);
 
-  // Set initial label text
-  modeLabel.textContent = isDarkMode ? "Dark Mode" : "Light Mode";
-
+ 
   // Toggle dark mode on switch change
   darkModeToggle.addEventListener("change", function () {
     const isDarkMode = darkModeToggle.checked;
     body.classList.toggle("dark-mode", isDarkMode);
     localStorage.setItem("darkMode", isDarkMode);
 
-    // Update label text
-    modeLabel.textContent = isDarkMode ? "Dark Mode" : "Light Mode";
-    modeLabel.style.color = isDarkMode ? "black" : "white";
   });
 });
