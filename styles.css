@@ -58,6 +58,20 @@ background-color: #1D1D25;
   padding-bottom: 50px;
   }
 
+.projects-btn {
+  font-size: 20px;
+    background-color: #D9B312;
+    border-radius: 30px;
+    padding: 15px 30px;
+}
+
+.projects-btn:hover {
+  background-color: transparent;
+  border: 2px solid #d9b310;
+  color: white;
+  cursor: pointer;
+  }
+  
 .about-content, .project-content, .section-message{
   font-size: 20px;
   color:white;
@@ -83,20 +97,19 @@ color: white;
 
 input[type="submit"] {
   background-color: #d9b310 !important;
-  color: #191919 !important;
   text-decoration: none;
-  border: 2px solid transparent;
-  font-weight: bold;
-  padding: 9px 22px;
   border-radius: 30px;
-  transition: 0.4s;
+  padding: 15px 30px;
+  font-size: 20px;
 }
 
+
+
 input[type="submit"]:hover {
-background-color: transparent;
-border: 2px solid #d9b310;
-color: white;
-cursor: pointer;
+background-color: transparent !important;
+border: 2px solid #d9b310 !important;
+cursor: pointer !important;
+color: #ffffff;
 }
 
 .sendBtn {
@@ -203,7 +216,7 @@ body.dark-mode .bg-about, body.dark-mode .card-body, body.dark-mode .bg-contact 
   background-color:#ECE8DD;
 }
 
-body.dark-mode .headline, body.dark-mode .skills,  body.dark-mode .about-content, body.dark-mode .card-title, body.dark-mode .project-content, body.dark-mode .preview, body.dark-mode .contact-label, body.dark-mode .section-message, body.dark-mode .separator{
+body.dark-mode .headline, body.dark-mode .skills,  body.dark-mode .about-content, body.dark-mode .card-title, body.dark-mode .project-content, body.dark-mode .preview, body.dark-mode .contact-label, body.dark-mode .section-message, body.dark-mode .separator, body.dark-mode .btn-form, body.dark-mode .projects-btn{
   color: black;
 }
 
