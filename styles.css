@@ -256,5 +256,9 @@ body.dark-mode .headline, body.dark-mode .skills,  body.dark-mode .about-content
 }
 
 
-
+@media (max-width: 991px) {
+  .profile{
+    width: 285px;
+  }
+}
 
