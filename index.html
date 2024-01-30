@@ -18,12 +18,17 @@
 
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="/images/logo1.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
 
-    <section class="bg-black">
+    <section class="bg-nav">
+     
       <nav id="navbar" class="navbar navbar-expand-lg bg-nav fixed-top">
         <div class="container">
+          <img class="logo" src="./images/logo1.png" alt="">
           <button
             class="navbar-toggler"
             type="button"
@@ -65,7 +70,7 @@
               class="navbar-nav ms-auto d-flex flex-row justify-content-center"
             >
               <!-- Added justify-content-center class -->
-              <li class="nav-item me-3">
+              <li class="nav-item me-1">
                 <a
                   class="nav-link"
                   href="https://github.com/luisp1009?tab=repositories"
@@ -73,7 +78,7 @@
                   ><i class="fa-brands fa-github"></i
                 ></a>
               </li>
-              <li class="nav-item me-3">
+              <li class="nav-item me-1">
                 <a
                   class="nav-link"
                   href="https://www.linkedin.com/in/luisparedes1009/"
@@ -81,7 +86,7 @@
                   ><i class="fa-brands fa-linkedin"></i
                 ></a>
               </li>
-              <li class="nav-item me-3">
+              <li class="nav-item me-1">
                 <a
                   class="nav-link"
                   target="_blank"
@@ -114,7 +119,25 @@
 
     <section id="about" class="bg-about py-5 py-md-0">
       <div class="container d-flex align-items-center justify-content-center" style="min-height: 100vh">
-        <div class="row">
+<div class="row">
+  <div class="col-4 d-flex align-items-center about-headlines">
+    <div class="d-flex flex-column text-center">
+      <h1 class="job-title">&lt;coder&gt;</h1>
+      <h5 class="job-description">Front-end developer who writes clean, efficient code. My work focuses on creating visually appealing, user-friendly interfaces, prioritizing quality and readability to deliver seamless user experiences.</h5>
+    </div>
+   
+  </div>
+  <div class="col-4"><img src="./images/Profile.png" alt="" class="img-fluid" /></div>
+  <div class="col-4 d-flex align-items-center about-headlines">
+    <div class="d-flex flex-column justify-content-center text-center">
+      <h1 class="job-title">designer</h1>
+    <h5 class="job-description">Graphic designer specializing in user interfaces and motion animations. My expertise lies in creating visually engaging designs that enhance user experiences to bring a focus on both aesthetics and functionality.</h5>
+  </div>
+</div>
+</div>
+
+
+        <!-- <div class="row">
           <div class="col-lg-6">
             <img src="./images/Profile.png" alt="" class="img-fluid" />
           </div>
@@ -135,7 +158,7 @@
               life.
             </p>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
