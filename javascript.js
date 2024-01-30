@@ -9,6 +9,25 @@ navLinks.forEach((link) => {
   });
 });
 
+document.addEventListener("scroll", () => {
+  const scrollPosition = window.scrollY;
+
+  navLinks.forEach((link) => {
+    const targetId = link.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (
+      targetElement &&
+      scrollPosition >= targetElement.offsetTop - document.querySelector('.navbar').offsetHeight &&
+      scrollPosition < targetElement.offsetTop + targetElement.offsetHeight
+    ) {
+      navLinks.forEach((link) => link.classList.remove("active"));
+      link.classList.add("active");
+    }
+  });
+});
+
+
 window.addEventListener("scroll", function () {
    var navbar = document.getElementById("navbar");
    if (window.scrollY > 20) {

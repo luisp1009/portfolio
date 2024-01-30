@@ -22,6 +22,10 @@ body {
   color:white;
 }
 
+.bg-nav{
+  background-color: black;
+}
+
 h1{
   font-size: 70px;
 }
@@ -30,7 +34,12 @@ h1{
   color: #D9B312;
 }
 
-
+.nav-link{
+  color: white;
+}
+.nav-link:hover{
+  color: #D9B312;
+}
 
 .bg-about, .bg-contact{
 background-color: #1D1D25;
@@ -211,7 +220,7 @@ body.dark-mode .slider{
   border: 2px solid black;
 }
 
-body.dark-mode .bg-about, body.dark-mode .card-body, body.dark-mode .bg-contact {
+body.dark-mode .bg-about, body.dark-mode .card-body, body.dark-mode .bg-contact, body.dark-mode  {
   background-color:#ECE8DD;
 }
 
