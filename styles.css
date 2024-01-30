@@ -154,14 +154,16 @@ box-shadow: 0 5px 5px rgba(217, 179, 16, 1);
 
 .slider {
   position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: white; /* Default image for off state */
-  background-size: cover;
-  transition: background 0.4s;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    background-size: cover;
+    transition: background 0.4s;
+    border: 2px solid white;
+    margin: -4px -4px;
 }
 
 .slider:before {
@@ -169,8 +171,8 @@ box-shadow: 0 5px 5px rgba(217, 179, 16, 1);
   position: absolute;
   height: 26px;
   width: 26px;
-  left: 4px;
-  bottom: 4px;
+  left: 6px;
+  bottom: 6px;
   background: url('./images/moon1.png');
   background-size: cover;
   transition: transform 0.4s;
@@ -205,7 +207,8 @@ body.dark-mode, body.dark-mode .bg-projects{
   background-color:white
 }
 body.dark-mode .slider{
-  background: black;
+  background: white;
+  border: 2px solid black;
 }
 
 body.dark-mode .bg-about, body.dark-mode .card-body, body.dark-mode .bg-contact {
