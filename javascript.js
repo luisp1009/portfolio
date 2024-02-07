@@ -1,4 +1,3 @@
-
 const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
 navLinks.forEach((link) => {
@@ -58,3 +57,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 });
+
