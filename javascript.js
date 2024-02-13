@@ -36,6 +36,20 @@ window.addEventListener("scroll", function () {
    }
  });
 
+ window.addEventListener('scroll', function() {
+  var logo = document.querySelector('.logo');
+  var logoLink = document.getElementById('logo-link');
+  if (window.scrollY > 20) {
+    logo.style.width = '65px';
+   
+  } else {
+    logo.style.width = '120px';
+    logoLink.style.padding = '0';
+  }
+});
+
+
+
 // Add this to javascript.js
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -57,4 +71,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 });
+
+
+document.body.onmousemove = function(e) {
+  document.documentElement.style.setProperty (
+    '--x', (
+      e.clientX+window.scrollX
+    )
+    + 'px'
+  );
+  document.documentElement.style.setProperty (
+    '--y', (
+      e.clientY+window.scrollY
+    ) 
+    + 'px'
+  );
+}
 

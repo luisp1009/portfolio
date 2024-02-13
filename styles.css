@@ -34,9 +34,12 @@ h1{
   color: #D9B312;
 }
 .logo{
-  width: 65px;
-  margin: 10px;
+  width: 120px;
+  margin: 10px 10px 10px 0;
+  transition: width 0.5s ease;
 }
+
+
 
 .nav-link, .about-headlines{
   color: white;
@@ -55,6 +58,7 @@ background-color: #1D1D25;
 
 .bg-projects{
   background-color: black;
+  margin-top: 50px;
 }
 
 .card{
@@ -64,6 +68,12 @@ background-color: #1D1D25;
 }
 .preview, .contact-label{
   color:white;
+}
+.disclaimer{
+  font-size: 10px;
+  font-weight: bold;
+  margin-top: -20px;
+  color: #ffffff;
 }
 
 .bg-projects {
@@ -224,12 +234,15 @@ body.dark-mode .slider{
   border: 2px solid black;
 }
 
-body.dark-mode .bg-about, body.dark-mode .card-body, body.dark-mode .bg-contact, body.dark-mode bg-nav {
+body.dark-mode .bg-about, body.dark-mode .card-body, body.dark-mode .bg-contact, body.dark-mode .bg-nav {
   background-color:#ECE8DD;
 }
 
-body.dark-mode .headline, body.dark-mode .skills,  body.dark-mode .about-content, body.dark-mode .card-title, body.dark-mode .project-content, body.dark-mode .preview, body.dark-mode .contact-label, body.dark-mode .section-message, body.dark-mode .separator, body.dark-mode .btn-form, body.dark-mode .projects-btn, body.dark-mode .job-description{
+body.dark-mode .headline, body.dark-mode .skills,  body.dark-mode .about-content, body.dark-mode .card-title, body.dark-mode .project-content, body.dark-mode .preview, body.dark-mode .contact-label, body.dark-mode .section-message, body.dark-mode .separator, body.dark-mode .btn-form, body.dark-mode .projects-btn, body.dark-mode .job-description, body.dark-mode .disclaimer, body.dark-mode .nav-link{
   color: black;
+}
+body.dark-mode .nav-link:hover{
+  color: #d9b310;
 }
 
 .card {
