@@ -1,7 +1,6 @@
-nav{
+nav {
   font-size: 25px;
 }
-
 
 * {
   padding: 0;
@@ -18,58 +17,64 @@ body {
   overflow-x: hidden;
   cursor: auto;
 }
-.headline, .skills, .card-title{
-  color:white;
+.headline,
+.skills,
+.card-title {
+  color: white;
 }
 
-.bg-nav{
+.bg-nav {
   background-color: black;
 }
 
-h1{
+h1 {
   font-size: 70px;
 }
 
-.job-title, .section-headline, .section-message{
-  color: #D9B312;
+.job-title,
+.section-headline,
+.section-message {
+  color: #d9b312;
 }
-.logo{
+.logo {
   width: 120px;
   margin: 10px 10px 10px 0;
   transition: width 0.5s ease;
 }
 
-
-
-.nav-link, .about-headlines{
+.nav-link,
+.about-headlines {
   color: white;
 }
-.nav-link:hover{
-  color: #D9B312;
+.nav-link:hover {
+  color: #d9b312;
 }
 
-.bg-about, .bg-contact{
-background-color: #1D1D25;
+.bg-about,
+.bg-contact {
+  background-color: #1d1d25;
 }
 
-.bg-contact{
+.bg-contact {
   padding: 60px 0;
 }
 
-.bg-projects{
+.bg-projects {
   background-color: black;
   margin-top: 50px;
 }
 
-.card{
-  background-color: #1D1D25;
+.card {
+  background-color: #1d1d25;
   padding: 20px 0;
   border: none;
 }
-.preview, .contact-label{
-  color:white;
+.preview,
+.contact-label,
+.fa-solid {
+  color: white;
 }
-.disclaimer{
+.disclaimer {
   font-size: 10px;
   font-weight: bold;
   margin-top: -20px;
@@ -79,13 +84,13 @@ background-color: #1D1D25;
 .bg-projects {
   padding-top: 50px;
   padding-bottom: 50px;
-  }
+}
 
 .projects-btn {
   font-size: 20px !important;
-    background-color: #D9B312 !important;
-    border-radius: 30px !important;
-    padding: 15px 30px !important;
+  background-color: #d9b312 !important;
+  border-radius: 30px !important;
+  padding: 15px 30px !important;
 }
 
 .projects-btn:hover {
@@ -93,29 +98,31 @@ background-color: #1D1D25;
   border: 2px solid #d9b310 !important;
   color: white;
   cursor: pointer !important;
-  }
-  
-.about-content, .project-content, .section-message{
-  font-size: 20px;
-  color:white;
 }
 
-.separator{
-  color:white;
+.about-content,
+.project-content,
+.section-message {
+  font-size: 20px;
+  color: white;
+}
+
+.separator {
+  color: white;
 }
 
 input,
 input[type="text"],
 select,
 textarea {
-padding: 12px;
-border: 1px solid white;
-border-radius: 4px;
-box-sizing: border-box;
-margin-top: 10px;
-margin-bottom: 25px;
-resize: vertical;
-color: white;
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  resize: vertical;
+  color: white;
 }
 
 input[type="submit"] {
@@ -126,18 +133,14 @@ input[type="submit"] {
   font-size: 20px !important;
 }
 
-
-
 input[type="submit"]:hover {
-background-color: transparent !important;
-border: 2px solid #d9b310 !important;
-cursor: pointer !important;
-color: #ffffff;
+  background-color: transparent !important;
+  border: 2px solid #d9b310 !important;
+  cursor: pointer !important;
+  color: #ffffff;
 }
 
-
-
-label{
+label {
   font-size: 20px;
 }
 
@@ -145,12 +148,12 @@ label{
   color: #d9b310 !important;
 }
 
-.project-content{
-font-size: 12px;
+.project-content {
+  font-size: 12px;
 }
 
 .scrolled {
-box-shadow: 0 5px 5px rgba(217, 179, 16, 1);
+  box-shadow: 0 5px 5px rgba(217, 179, 16, 1);
 }
 
 .mode-switch {
@@ -177,16 +180,16 @@ box-shadow: 0 5px 5px rgba(217, 179, 16, 1);
 
 .slider {
   position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: black;
-    background-size: cover;
-    transition: background 0.4s;
-    border: 2px solid white;
-    margin: -4px -4px;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  background-size: cover;
+  transition: background 0.4s;
+  border: 2px solid white;
+  margin: -4px -4px;
 }
 
 .slider:before {
@@ -196,11 +199,10 @@ box-shadow: 0 5px 5px rgba(217, 179, 16, 1);
   width: 26px;
   left: 6px;
   bottom: 6px;
-  background: url('./images/moon1.png');
+  background: url("./images/moon1.png");
   background-size: cover;
   transition: transform 0.4s;
 }
-
 
 input:checked + .slider:before {
   transform: translateX(26px);
@@ -219,29 +221,46 @@ input:checked + .slider:before {
 }
 
 .dark-mode .slider:before {
-  background: url('./images/sun1.png'); 
+  background: url("./images/sun1.png");
   background-size: cover;
 }
 
-
 /* Add this to styles.css */
 
-body.dark-mode, body.dark-mode .bg-projects{
-  background-color:white
+body.dark-mode,
+body.dark-mode .bg-projects {
+  background-color: white;
 }
-body.dark-mode .slider{
+body.dark-mode .slider {
   background: white;
   border: 2px solid black;
 }
 
-body.dark-mode .bg-about, body.dark-mode .card-body, body.dark-mode .bg-contact, body.dark-mode .bg-nav {
-  background-color:#ECE8DD;
+body.dark-mode .bg-about,
+body.dark-mode .card-body,
+body.dark-mode .bg-contact,
+body.dark-mode .bg-nav {
+  background-color: #ece8dd;
 }
 
-body.dark-mode .headline, body.dark-mode .skills,  body.dark-mode .about-content, body.dark-mode .card-title, body.dark-mode .project-content, body.dark-mode .preview, body.dark-mode .contact-label, body.dark-mode .section-message, body.dark-mode .separator, body.dark-mode .btn-form, body.dark-mode .projects-btn, body.dark-mode .job-description, body.dark-mode .disclaimer, body.dark-mode .nav-link{
+body.dark-mode .headline,
+body.dark-mode .skills,
+body.dark-mode .about-content,
+body.dark-mode .card-title,
+body.dark-mode .project-content,
+body.dark-mode .preview,
+body.dark-mode .contact-label,
+body.dark-mode .section-message,
+body.dark-mode .separator,
+body.dark-mode .btn-form,
+body.dark-mode .projects-btn,
+body.dark-mode .job-description,
+body.dark-mode .disclaimer,
+body.dark-mode .nav-link,
+body.dark-mode .fa-solid {
   color: black;
 }
-body.dark-mode .nav-link:hover{
+body.dark-mode .nav-link:hover {
   color: #d9b310;
 }
 
@@ -256,25 +275,176 @@ body.dark-mode .nav-link:hover{
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  opacity: 0; 
+  opacity: 0;
   transition: opacity 0.3s;
 }
 
 .card:hover .card-overlay {
-  opacity: 0; 
+  opacity: 0;
 }
 
 .container:hover .card:not(:hover) .card-overlay {
   opacity: 1;
 }
 
-.profile{
+.profile {
   height: 290px;
 }
 
 @media (max-width: 991px) {
-  .profile{
+  .profile {
     width: 285px;
   }
 }
 
+.gallery {
+  width: 100%;
+
+}
+.gallery-container {
+  align-items: center;
+  display: flex;
+  height: 400px;
+  margin: 0 auto;
+  max-width: 1000px;
+  position: relative;
+  overflow-x: auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.gallery-item {
+  height: 400px;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  z-index: 0;
+  border-radius: 15px;
+  background-size: contain;
+}
+
+.gallery-item-1 {
+  left: 15%;
+  opacity: 0.4;
+  transform: translateX(-50%);
+}
+
+.gallery-item-2,
+.gallery-item-4 {
+  height: 400px;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.gallery-item-2 {
+  left: 30%;
+  transform: translateX(-50%);
+}
+.gallery-item-3 {
+  box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
+  height: 400px;
+  opacity: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.gallery-item-4 {
+  left: 70%;
+  transform: translateX(-50%);
+}
+
+.gallery-item-5 {
+  left: 85%;
+  opacity: 0.4;
+  transform: translateX(-50%);
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+  height: 100px;
+}
+
+.gallery-controls button {
+  background-color: #D9B312;
+  border-radius: 35px;
+  cursor: pointer;
+  font-size: 24px;
+  margin: 13px 10px 25px;
+  padding: 0px 25px;
+  text-transform: capitalize;
+  border: none;
+}
+
+.gallery-controls-button:focus {
+  outline: none;
+}
+
+.gallery-control-previous {
+  position: relative;
+}
+
+.gallery-control-previous::before {
+  border: solid #000000;
+  border-width: 0 5px 5px 0;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  left: -30px;
+  padding: 10px;
+  position: absolute;
+  top: 25%;
+  transform: rotate(135deg) translateY(-50%);
+  transition: left 0.15s ease-in-out;
+  width: 5px;
+}
+
+.gallery-control-previous:hover::before {
+  left: -40px;
+}
+
+.gallery-controls-next {
+  position: relative;
+}
+
+.gallery-control-next::before {
+  border: solid #000000;
+  border-width: 0 5px 5px 0;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  right: -30px;
+  padding: 10px;
+  position: absolute;
+  top: 45;
+  transform: rotate(-45deg) translateY(-50%);
+  transition: left 0.15s ease-in-out;
+  width: 5px;
+}
+
+.gallery-control-next:hover::before {
+  right: -40px;
+}
+.gallery-nav {
+  bottom: -15px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.gallery nav li {
+  background: #cccccc;
+  border-radius: 50%;
+  height: 10px;
+  margin: 0 16px;
+  width: 10px;
+}
+
+.gallery-nav li.gallery-item-selected {
+  background: #555555;
+}
