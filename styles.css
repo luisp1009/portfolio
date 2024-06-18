@@ -448,3 +448,12 @@ body.dark-mode .nav-link:hover {
 .gallery-nav li.gallery-item-selected {
   background: #555555;
 }
+
+
+.bg-black{
+border-top-right-radius: 100%;
+border-bottom-left-radius: 100%;
+}
+.fa-envelope, .fa-mobile-retro, .email-contact, .phone-contact{
+  font-size: 20px;
+}
