@@ -12,20 +12,31 @@ nav {
 body {
   height: 100vh;
   cursor: none;
-  background-color: black;
+  background-color: #2e3944;
   width: 100vw;
   overflow-x: hidden;
   cursor: auto;
 }
 .headline,
-.skills,
 .card-title,
 .contact-info {
   color: white;
 }
 
+.skills{
+color:white;
+font-weight:200;
+}
+.job-description, .section-message, .project-description{
+color:white;
+font-weight:200;
+font-size: 20px;
+line-height: 30px;
+}
+
+
 .bg-nav {
-  background-color: black;
+  background-color: #212a31;
 }
 
 h1 {
@@ -33,13 +44,12 @@ h1 {
 }
 
 .job-title,
-.section-headline,
-.section-message {
+.section-headline {
   color: #d9b312;
 }
 .logo {
-  width: 120px;
-  margin: 10px 10px 10px 0;
+  width: 60px;
+  margin: 10px 30px 10px 0;
   transition: width 0.5s ease;
 }
 
@@ -53,7 +63,7 @@ h1 {
 
 .bg-about,
 .bg-contact {
-  background-color: #1d1d25;
+  background-color: #212a31;
 }
 
 .bg-contact {
@@ -61,7 +71,7 @@ h1 {
 }
 
 .bg-projects {
-  background-color: black;
+  background-color: #2e3944;
   margin-top: 50px;
 }
 
@@ -102,51 +112,18 @@ h1 {
 }
 
 .about-content,
-.project-content,
-.section-message {
+.project-content{
   font-size: 20px;
   color: white;
 }
 
-.separator {
+.separator, .project-description {
   color: white;
-}
-
-input,
-input[type="text"],
-select,
-textarea {
-  padding: 12px;
-  border: 1px solid white;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 10px;
-  margin-bottom: 25px;
-  resize: vertical;
-  color: white;
-}
-
-input[type="submit"] {
-  background-color: #d9b310 !important;
-  text-decoration: none !important;
-  border-radius: 30px !important;
-  padding: 15px 30px !important;
-  font-size: 20px !important;
-}
-
-input[type="submit"]:hover {
-  background-color: transparent !important;
-  border: 2px solid #d9b310 !important;
-  cursor: pointer !important;
-  color: #ffffff;
-}
-
-label {
-  font-size: 20px;
 }
 
 .navbar-nav .nav-link.active {
   color: #d9b310 !important;
+  border-bottom: 2px solid;
 }
 
 .project-content {
@@ -230,7 +207,7 @@ input:checked + .slider:before {
 
 body.dark-mode,
 body.dark-mode .bg-projects {
-  background-color: white;
+  background-color: #BED7DC;
 }
 body.dark-mode .slider {
   background: white;
@@ -241,7 +218,7 @@ body.dark-mode .bg-about,
 body.dark-mode .card-body,
 body.dark-mode .bg-contact,
 body.dark-mode .bg-nav {
-  background-color: #ece8dd;
+  background-color: #B3C8CF;
 }
 
 body.dark-mode .headline,
@@ -251,7 +228,6 @@ body.dark-mode .card-title,
 body.dark-mode .project-content,
 body.dark-mode .preview,
 body.dark-mode .contact-label,
-body.dark-mode .section-message,
 body.dark-mode .separator,
 body.dark-mode .btn-form,
 body.dark-mode .projects-btn,
@@ -259,13 +235,42 @@ body.dark-mode .job-description,
 body.dark-mode .disclaimer,
 body.dark-mode .nav-link,
 body.dark-mode .fa-solid,
-body.dark-mode .contact-info {
-  color: black;
+body.dark-mode .contact-info,
+body.dark-mode .project-description,
+body.dark-mode .section-message {
+  color: #124e66 !important;
 }
 body.dark-mode .nav-link:hover {
-  color: #d9b310;
+  color: #A91D3A;
+}
+body.dark-mode .scrolled
+   {
+    box-shadow: 0 5px 5px rgba(169, 29, 58, 1);
 }
 
+body.dark-mode .job-description,
+body.dark-mode .section-message,
+body.dark-mode .project-description
+body.dark-mode .skills{
+  font-weight:300 !important;
+  }
+  body.dark-mode .skills{
+    font-weight:300;
+    }
+
+body.dark-mode .navbar-nav .nav-link.active {
+  color: #A91D3A !important;
+  border-bottom: 2px solid;
+}
+
+body.dark-mode .job-title,
+body.dark-mode .section-headline,
+body.dark-mode .section-message {
+  color: #A91D3A;
+}
+body.dark-mode #logo-link .logo {
+  filter: invert(81%) sepia(64%) saturate(647%) hue-rotate(152deg) brightness(90%) contrast(91%);
+}
 .card {
   position: relative;
 }
@@ -307,3 +312,5 @@ border-bottom-left-radius: 100%;
 .fa-envelope, .fa-mobile-retro, .email-contact, .phone-contact{
   font-size: 20px;
 }
+
+
