@@ -27,7 +27,7 @@ body {
 color:white;
 font-weight:200;
 }
-.job-description, .section-message, .project-description{
+.job-description, .section-message{
 color:white;
 font-weight:200;
 font-size: 20px;
@@ -119,6 +119,7 @@ h1 {
 
 .separator, .project-description {
   color: white;
+  font-weight:300;
 }
 
 .navbar-nav .nav-link.active {
@@ -250,7 +251,7 @@ body.dark-mode .scrolled
 
 body.dark-mode .job-description,
 body.dark-mode .section-message,
-body.dark-mode .project-description
+body.dark-mode .project-description,
 body.dark-mode .skills{
   font-weight:300 !important;
   }
