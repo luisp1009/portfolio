@@ -242,7 +242,7 @@ body.dark-mode .section-message {
   color: #124e66 !important;
 }
 body.dark-mode .nav-link:hover {
-  color: #A91D3A;
+  color: #A91D3A !important;
 }
 body.dark-mode .scrolled
    {
