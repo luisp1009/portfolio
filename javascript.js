@@ -69,3 +69,29 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+$(function () {
+  'use strict'
+
+  $('[data-toggle="offcanvas"]').on('click', function () {
+    $('.offcanvas-collapse').toggleClass('open')
+  })
+})
+
+
+// REMOVE SCREEN COVER NAV ON LARGE SCREEN
+$(window).resize(function() {
+    if ($(window).width() > 1200) {
+      $( "#navbarNav" ).removeClass( "open" )
+      $( "#hamburger-6" ).removeClass( "is-active" )
+      
+    }
+}).resize();
+
+
+$(document).ready(function(){
+  $(".navbar-toggler").click(function(){
+    $('#hamburger-6').toggleClass("is-active");
+  });
+});
+
