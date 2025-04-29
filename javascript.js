@@ -28,27 +28,6 @@ document.addEventListener("scroll", () => {
   });
 });
 
-// window.addEventListener("scroll", function () {
-//   var navbar = document.getElementById("navbar");
-//   if (window.scrollY > 20) {
-//     navbar.classList.add("scrolled");
-//   } else {
-//     navbar.classList.remove("scrolled");
-//   }
-// });
-
-// window.addEventListener("scroll", function () {
-//   var logo = document.querySelector(".logo");
-//   var logoLink = document.getElementById("logo-link");
-//   if (window.scrollY > 20) {
-//     logo.style.width = "65px";
-//   } else {
-//     logo.style.width = "120px";
-//     logoLink.style.padding = "0";
-//   }
-// });
-
-// Add this to javascript.js
 
 document.addEventListener("DOMContentLoaded", function () {
   const darkModeToggle = document.getElementById("dark-mode-toggle");
@@ -70,28 +49,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-$(function () {
-  'use strict'
-
-  $('[data-toggle="offcanvas"]').on('click', function () {
-    $('.offcanvas-collapse').toggleClass('open')
-  })
-})
 
 
-// REMOVE SCREEN COVER NAV ON LARGE SCREEN
-$(window).resize(function() {
-    if ($(window).width() > 1200) {
-      $( "#navbarNav" ).removeClass( "open" )
-      $( "#hamburger-6" ).removeClass( "is-active" )
-      
-    }
-}).resize();
-
-
-$(document).ready(function(){
-  $(".navbar-toggler").click(function(){
-    $('#hamburger-6').toggleClass("is-active");
-  });
+$(".slick").slick({
+  dots: false,
+vertical: false,
+  infinite: true,
+   slidesToShow: 5,
+  slidesToScroll: 1,
+arrows: true,
+centerMode: true,
+focusOnSelect: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+responsive: [
+{
+breakpoint: 1700,
+settings: {
+  slidesToShow: 4,
+  slidesToScroll: 1,
+}
+},
+{
+breakpoint: 991,
+settings: {
+  slidesToShow: 3,
+  slidesToScroll: 1,
+}
+},
+{
+breakpoint: 767,
+settings: {
+  slidesToShow: 2,
+  slidesToScroll: 1
+}
+},
+{	
+breakpoint: 540,
+settings: {
+  slidesToShow: 1,
+  slidesToScroll: 1
+}
+}]
 });
+
+
 
