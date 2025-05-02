@@ -322,4 +322,5 @@ border-bottom-left-radius: 100%;
 }
 .slick-next, .slick-prev{
   top: 96% !important;
+  z-index: 1;
 }
