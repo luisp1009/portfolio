@@ -4,7 +4,7 @@
 
 
 // ============================================================
-// PROJECTS
+// PROJECT DATA
 // ============================================================
 
 const projects = [
@@ -120,9 +120,37 @@ const projects = [
   },
 ];
 
+const webApps = [
+  {
+    title: "NVDA Option Pro",
+    url: "https://nvda-option-pro.onrender.com/",
+    image: "./images/options.png",
+  },
+  {
+    title: "Vimeo Latest Widget",
+    url: "https://vimeo-latest-widget.onrender.com/",
+    image: "./images/vimeo.png",
+  },
+  {
+    title: "Site Tree Crawler",
+    url: "https://site-tree-crawler.onrender.com/",
+    image: "./images/site-crawler.png",
+  },
+  {
+    title: "YouTube Latest Widget",
+    url: "https://youtube-latest-widget.onrender.com/",
+    image: "./images/youtube-fetch.png",
+  },
+  {
+    title: "Vocabulary Tests",
+    url: "https://vocabulary-tests.netlify.app/",
+    image: "./images/vocabulary.png",
+  }
+];
+
 
 // ============================================================
-// REDUCED MOTION
+// GLOBAL
 // ============================================================
 
 const reducedMotion = window.matchMedia(
@@ -188,10 +216,7 @@ function initTheme() {
   try {
     enabled = localStorage.getItem("darkMode") === "true";
   } catch (error) {
-    console.warn(
-      "Unable to read theme preference:",
-      error
-    );
+    console.warn("Unable to read theme preference:", error);
   }
 
   toggle.checked = enabled;
@@ -273,6 +298,7 @@ function initMobileNav() {
 
   let menuOpen = false;
 
+
   function setMenu(open) {
     menuOpen = open;
 
@@ -309,9 +335,11 @@ function initMobileNav() {
     );
   }
 
+
   toggle.addEventListener("click", () => {
     setMenu(!menuOpen);
   });
+
 
   menuLinks.forEach((link) => {
     link.addEventListener("click", (event) => {
@@ -323,14 +351,12 @@ function initMobileNav() {
 
       setMenu(false);
 
-      window.setTimeout(
-        () => {
-          smoothScrollTo(href);
-        },
-        reducedMotion ? 0 : 130
-      );
+      window.setTimeout(() => {
+        smoothScrollTo(href);
+      }, reducedMotion ? 0 : 130);
     });
   });
+
 
   document.addEventListener(
     "keydown",
@@ -343,6 +369,7 @@ function initMobileNav() {
       }
     }
   );
+
 
   window.addEventListener(
     "resize",
@@ -377,7 +404,12 @@ function initDesktopNav() {
           const href =
             link.getAttribute("href");
 
-          if (!href || href === "#") return;
+          if (
+            !href ||
+            href === "#"
+          ) {
+            return;
+          }
 
           event.preventDefault();
 
@@ -400,7 +432,6 @@ function initActiveNav() {
     ].join(",")
   );
 
-  // MUST MATCH THE ACTUAL ORDER OF THE PAGE
   const sections = [
     "#main",
     "#projects",
@@ -419,18 +450,14 @@ function initActiveNav() {
     links.forEach((link) => {
       link.classList.toggle(
         "active",
-        link.getAttribute("href") === `#${id}`
+        link.getAttribute("href") ===
+          `#${id}`
       );
     });
   }
 
 
   function updateActiveSection() {
-    /*
-      Detection point inside the viewport.
-      Makes the nav change shortly after
-      entering each section.
-    */
     const marker =
       window.scrollY +
       160;
@@ -444,25 +471,16 @@ function initActiveNav() {
         marker >=
         section.offsetTop
       ) {
-        current =
-          section;
+        current = section;
       }
     });
 
 
-    /*
-      Force Contact active when we are
-      at the bottom of the page.
-
-      This helps because Contact is the
-      last section and sometimes the page
-      cannot scroll far enough for its
-      normal trigger point.
-    */
     const atBottom =
       window.innerHeight +
       window.scrollY >=
-      document.documentElement.scrollHeight - 10;
+      document.documentElement.scrollHeight -
+        10;
 
 
     if (atBottom) {
@@ -510,9 +528,10 @@ function initActiveNav() {
 // ============================================================
 
 function initProjects() {
-  const list = document.getElementById(
-    "workProjectList"
-  );
+  const list =
+    document.getElementById(
+      "workProjectList"
+    );
 
   const projectLink =
     document.getElementById(
@@ -579,6 +598,27 @@ function initProjects() {
       "workMouseLight"
     );
 
+  const projectTypeLabel =
+    document.getElementById(
+      "workProjectTypeLabel"
+    );
+
+  const projectDescription =
+    document.getElementById(
+      "workProjectDescription"
+    );
+
+  const projectDetailLabel =
+    document.getElementById(
+      "workProjectDetailLabel"
+    );
+
+  const categoryTabs =
+    document.querySelectorAll(
+      ".project-type-tab"
+    );
+
+
   if (
     !list ||
     !projectLink ||
@@ -595,32 +635,57 @@ function initProjects() {
 
 
   // ==========================================================
-  // ESCAPE HTML
+  // CATEGORY STATE
+  // ==========================================================
+
+  let currentCategory =
+    "websites";
+
+  let activeProjects =
+    projects;
+
+
+  // ==========================================================
+  // HELPERS
   // ==========================================================
 
   function escapeHTML(value) {
     return String(value)
-      .replaceAll("&", "&amp;")
-      .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;")
-      .replaceAll('"', "&quot;")
-      .replaceAll("'", "&#039;");
+      .replaceAll(
+        "&",
+        "&amp;"
+      )
+      .replaceAll(
+        "<",
+        "&lt;"
+      )
+      .replaceAll(
+        ">",
+        "&gt;"
+      )
+      .replaceAll(
+        '"',
+        "&quot;"
+      )
+      .replaceAll(
+        "'",
+        "&#039;"
+      );
   }
 
 
-  // ==========================================================
-  // PROJECT INITIALS
-  // ==========================================================
-
   function makeMonogram(title) {
-    const words = title
-      .trim()
-      .split(/\s+/)
-      .filter(Boolean);
+    const words =
+      title
+        .trim()
+        .split(/\s+/)
+        .filter(Boolean);
+
 
     if (!words.length) {
       return "LP";
     }
+
 
     if (words.length === 1) {
       return words[0]
@@ -628,172 +693,38 @@ function initProjects() {
           /[^A-Za-z0-9]/g,
           ""
         )
-        .slice(0, 3)
+        .slice(
+          0,
+          3
+        )
         .toUpperCase();
     }
 
+
     return words
-      .slice(0, 3)
-      .map((word) => word[0])
+      .slice(
+        0,
+        3
+      )
+      .map(
+        (word) =>
+          word[0]
+      )
       .join("")
       .toUpperCase();
   }
 
 
-  // ==========================================================
-  // DOMAIN
-  // ==========================================================
-
   function getDomain(url) {
     try {
       return new URL(url)
         .hostname
-        .replace(/^www\./, "");
+        .replace(
+          /^www\./,
+          ""
+        );
     } catch {
-      return "Live website";
-    }
-  }
-
-
-  // ==========================================================
-  // RENDER PROJECT LIST
-  // ==========================================================
-
-  list.innerHTML = projects
-    .map(
-      (project, index) => `
-        <button
-          class="work-project-item${
-            index === 0
-              ? " active"
-              : ""
-          }"
-          type="button"
-          role="tab"
-          aria-selected="${
-            index === 0
-              ? "true"
-              : "false"
-          }"
-          data-project-index="${index}"
-        >
-
-          <span class="work-project-number">
-            ${String(
-              index + 1
-            ).padStart(2, "0")}
-          </span>
-
-          <span class="work-project-name">
-            ${escapeHTML(project.title)}
-
-            <small>
-              Website project
-            </small>
-          </span>
-
-          <span class="work-project-arrow">
-            ↗
-          </span>
-
-        </button>
-      `
-    )
-    .join("");
-
-  const projectItems =
-    list.querySelectorAll(
-      ".work-project-item"
-    );
-
-
-  // ==========================================================
-  // SELECT PROJECT
-  // ==========================================================
-
-  function selectProject(index) {
-    const project = projects[index];
-
-    if (!project) return;
-
-    projectItems.forEach(
-      (item, itemIndex) => {
-        const active =
-          itemIndex === index;
-
-        item.classList.toggle(
-          "active",
-          active
-        );
-
-        item.setAttribute(
-          "aria-selected",
-          String(active)
-        );
-      }
-    );
-
-    projectLink.href = project.url;
-
-    projectLink.setAttribute(
-      "aria-label",
-      `Visit ${project.title} website`
-    );
-
-    previewNumber.textContent =
-      `${String(
-        index + 1
-      ).padStart(2, "0")} / ${String(
-        projects.length
-      ).padStart(2, "0")}`;
-
-    previewTitle.textContent =
-      project.title;
-
-    previewProject.textContent =
-      project.title;
-
-    previewDomain.textContent =
-      getDomain(project.url);
-
-    projectMonogram.textContent =
-      makeMonogram(project.title);
-
-    browserContent.classList.remove(
-      "image-missing"
-    );
-
-    projectImage.alt =
-      `${project.title} website preview`;
-
-    projectImage.src =
-      project.image;
-
-    if (
-      projectPreview &&
-      typeof projectPreview.animate ===
-        "function" &&
-      !reducedMotion
-    ) {
-      projectPreview.animate(
-        [
-          {
-            opacity: 0.72,
-            transform:
-              "translateY(4px)",
-          },
-          {
-            opacity: 1,
-            transform:
-              "translateY(0)",
-          },
-        ],
-        {
-          duration: 220,
-          easing:
-            "cubic-bezier(.2,.8,.2,1)",
-        }
-      );
+      return "Live project";
     }
   }
 
@@ -811,6 +742,7 @@ function initProjects() {
     }
   );
 
+
   projectImage.addEventListener(
     "load",
     () => {
@@ -822,47 +754,411 @@ function initProjects() {
 
 
   // ==========================================================
-  // PROJECT EVENTS
+  // SELECT PROJECT
   // ==========================================================
 
-  projectItems.forEach((item) => {
-    const index = Number(
-      item.dataset.projectIndex
-    );
+  function selectProject(index) {
+    const project =
+      activeProjects[index];
 
-    item.addEventListener(
-      "mouseenter",
-      () => {
-        selectProject(index);
+
+    if (!project) {
+      return;
+    }
+
+
+    const projectItems =
+      list.querySelectorAll(
+        ".work-project-item"
+      );
+
+
+    projectItems.forEach(
+      (
+        item,
+        itemIndex
+      ) => {
+        const active =
+          itemIndex ===
+          index;
+
+
+        item.classList.toggle(
+          "active",
+          active
+        );
+
+
+        item.setAttribute(
+          "aria-selected",
+          String(active)
+        );
       }
     );
 
-    item.addEventListener(
-      "focus",
-      () => {
-        selectProject(index);
-      }
+
+    // ========================================================
+    // LINK
+    // ========================================================
+
+    projectLink.href =
+      project.url;
+
+
+    projectLink.setAttribute(
+      "aria-label",
+      `Visit ${project.title}`
     );
 
-    item.addEventListener(
-      "click",
-      () => {
-        selectProject(index);
-      }
-    );
-  });
 
-  selectProject(0);
+    // ========================================================
+    // NUMBER
+    // ========================================================
+
+    previewNumber.textContent =
+      `${String(
+        index + 1
+      ).padStart(
+        2,
+        "0"
+      )} / ${String(
+        activeProjects.length
+      ).padStart(
+        2,
+        "0"
+      )}`;
+
+
+    // ========================================================
+    // PROJECT INFO
+    // ========================================================
+
+    previewTitle.textContent =
+      project.title;
+
+
+    previewProject.textContent =
+      project.title;
+
+
+    previewDomain.textContent =
+      getDomain(
+        project.url
+      );
+
+
+    projectMonogram.textContent =
+      makeMonogram(
+        project.title
+      );
+
+
+    // ========================================================
+    // IMAGE
+    // ========================================================
+
+    browserContent.classList.remove(
+      "image-missing"
+    );
+
+
+    projectImage.alt =
+      `${project.title} project preview`;
+
+
+    projectImage.src =
+      project.image;
+
+
+    // ========================================================
+    // CATEGORY-SPECIFIC COPY
+    // ========================================================
+
+    if (
+      currentCategory ===
+      "apps"
+    ) {
+      if (projectTypeLabel) {
+        projectTypeLabel.textContent =
+          "LIVE WEB APPLICATION";
+      }
+
+
+      if (projectDetailLabel) {
+        projectDetailLabel.textContent =
+          "LIVE APP";
+      }
+
+
+      if (projectDescription) {
+        projectDescription.textContent =
+          "Select an application from the list to preview it. Click the image above to open the live web app.";
+      }
+    } else {
+      if (projectTypeLabel) {
+        projectTypeLabel.textContent =
+          "LIVE WEBSITE";
+      }
+
+
+      if (projectDetailLabel) {
+        projectDetailLabel.textContent =
+          "LIVE SITE";
+      }
+
+
+      if (projectDescription) {
+        projectDescription.textContent =
+          "Select a website from the list to preview it. Click the image above to visit the live website.";
+      }
+    }
+
+
+    // ========================================================
+    // PREVIEW ANIMATION
+    // ========================================================
+
+    if (
+      projectPreview &&
+      typeof projectPreview.animate ===
+        "function" &&
+      !reducedMotion
+    ) {
+      projectPreview.animate(
+        [
+          {
+            opacity: 0.72,
+            transform:
+              "translateY(4px)",
+          },
+
+          {
+            opacity: 1,
+            transform:
+              "translateY(0)",
+          },
+        ],
+        {
+          duration: 220,
+
+          easing:
+            "cubic-bezier(.2,.8,.2,1)",
+        }
+      );
+    }
+  }
 
 
   // ==========================================================
-  // MOUSE EFFECT
+  // RENDER PROJECT LIST
+  // ==========================================================
+
+  function renderProjects() {
+    const projectTypeText =
+      currentCategory ===
+      "apps"
+        ? "Web application"
+        : "Website project";
+
+
+    list.innerHTML =
+      activeProjects
+        .map(
+          (
+            project,
+            index
+          ) => `
+            <button
+              class="work-project-item${
+                index === 0
+                  ? " active"
+                  : ""
+              }"
+              type="button"
+              role="tab"
+              aria-selected="${
+                index === 0
+                  ? "true"
+                  : "false"
+              }"
+              data-project-index="${index}"
+            >
+
+              <span class="work-project-number">
+                ${String(
+                  index + 1
+                ).padStart(
+                  2,
+                  "0"
+                )}
+              </span>
+
+              <span class="work-project-name">
+                ${escapeHTML(
+                  project.title
+                )}
+
+                <small>
+                  ${projectTypeText}
+                </small>
+              </span>
+
+              <span class="work-project-arrow">
+                ↗
+              </span>
+
+            </button>
+          `
+        )
+        .join("");
+
+
+    // RESET SCROLL POSITION
+    list.scrollTop = 0;
+
+
+    // ADD EVENTS TO NEW ITEMS
+    list
+      .querySelectorAll(
+        ".work-project-item"
+      )
+      .forEach(
+        (item) => {
+          const index =
+            Number(
+              item.dataset
+                .projectIndex
+            );
+
+
+          item.addEventListener(
+            "mouseenter",
+            () => {
+              selectProject(
+                index
+              );
+            }
+          );
+
+
+          item.addEventListener(
+            "focus",
+            () => {
+              selectProject(
+                index
+              );
+            }
+          );
+
+
+          item.addEventListener(
+            "click",
+            () => {
+              selectProject(
+                index
+              );
+            }
+          );
+        }
+      );
+
+
+    selectProject(0);
+  }
+
+
+  // ==========================================================
+  // CATEGORY TABS
+  // ==========================================================
+
+  categoryTabs.forEach(
+    (tab) => {
+      tab.addEventListener(
+        "click",
+        () => {
+          const category =
+            tab.dataset
+              .projectType;
+
+
+          if (
+            !category ||
+            category ===
+              currentCategory
+          ) {
+            return;
+          }
+
+
+          currentCategory =
+            category;
+
+
+          // ==================================================
+          // SELECT DATA ARRAY
+          // ==================================================
+
+          activeProjects =
+            currentCategory ===
+            "apps"
+              ? webApps
+              : projects;
+
+
+          // ==================================================
+          // UPDATE TAB STATE
+          // ==================================================
+
+          categoryTabs.forEach(
+            (button) => {
+              const isActive =
+                button ===
+                tab;
+
+
+              button.classList.toggle(
+                "active",
+                isActive
+              );
+
+
+              button.setAttribute(
+                "aria-selected",
+                String(
+                  isActive
+                )
+              );
+            }
+          );
+
+
+          // ==================================================
+          // RENDER NEW CATEGORY
+          // ==================================================
+
+          renderProjects();
+        }
+      );
+    }
+  );
+
+
+  // ==========================================================
+  // FIRST RENDER
+  // ==========================================================
+
+  renderProjects();
+
+
+  // ==========================================================
+  // MOUSE / TILT EFFECT
   // ==========================================================
 
   const canHover =
     window.matchMedia(
       "(hover: hover) and (pointer: fine)"
     ).matches;
+
 
   if (
     !projectVisual ||
@@ -874,6 +1170,7 @@ function initProjects() {
   ) {
     return;
   }
+
 
   let targetRotateX = 0;
   let targetRotateY = 0;
@@ -891,15 +1188,18 @@ function initProjects() {
         currentRotateX
       ) * 0.14;
 
+
     currentRotateY +=
       (
         targetRotateY -
         currentRotateY
       ) * 0.14;
 
+
     browserWindow.style.transform =
       `rotateX(${currentRotateX}deg) ` +
       `rotateY(${currentRotateY}deg)`;
+
 
     const difference =
       Math.abs(
@@ -911,19 +1211,26 @@ function initProjects() {
         currentRotateY
       );
 
-    if (difference > 0.01) {
+
+    if (
+      difference >
+      0.01
+    ) {
       animationFrame =
         requestAnimationFrame(
           animateTilt
         );
     } else {
-      animationFrame = null;
+      animationFrame =
+        null;
     }
   }
 
 
   function startTilt() {
-    if (!animationFrame) {
+    if (
+      !animationFrame
+    ) {
       animationFrame =
         requestAnimationFrame(
           animateTilt
@@ -939,19 +1246,26 @@ function initProjects() {
         projectVisual
           .getBoundingClientRect();
 
+
       const x =
         event.clientX -
         rect.left;
+
 
       const y =
         event.clientY -
         rect.top;
 
+
       const percentX =
-        x / rect.width;
+        x /
+        rect.width;
+
 
       const percentY =
-        y / rect.height;
+        y /
+        rect.height;
+
 
       targetRotateY =
         (
@@ -959,23 +1273,33 @@ function initProjects() {
           0.5
         ) * 4.5;
 
+
       targetRotateX =
         (
           0.5 -
           percentY
         ) * 3.5;
 
+
+      // CURSOR
+
       cursorView.style.left =
         `${x}px`;
+
 
       cursorView.style.top =
         `${y}px`;
 
+
+      // LIGHT
+
       mouseLight.style.left =
         `${x}px`;
 
+
       mouseLight.style.top =
         `${y}px`;
+
 
       startTilt();
     }
@@ -986,6 +1310,7 @@ function initProjects() {
     "pointerleave",
     () => {
       targetRotateX = 0;
+
       targetRotateY = 0;
 
       startTilt();

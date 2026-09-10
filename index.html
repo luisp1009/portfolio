@@ -165,7 +165,7 @@
         <a href="#main"> Home </a>
 
         <a href="#projects"> Projects </a>
-        
+
         <a href="#about"> About </a>
 
         <a href="#contact"> Contact </a>
@@ -210,7 +210,7 @@
               <p class="capabilities-kicker">WHAT I BUILD</p>
 
               <h1 class="capabilities-title">
-                Front-end development
+                Web development
 
                 <span class="d-block">
                   built for
@@ -222,10 +222,12 @@
 
             <div class="col-12">
               <p class="capabilities-intro">
-                I turn requirements and visual direction into responsive,
-                maintainable, production-ready websites and interfaces — with a
-                strong eye for the details that make them feel polished.
-              </p>
+  I build responsive, production-ready websites and web applications,
+  with a strong focus on front-end development and hands-on experience
+  with back-end logic, APIs, data and deployment. My background in
+  design and marketing helps me create solutions that are not only
+  functional, but clear, usable and aligned with business goals.
+</p>
             </div>
           </div>
 
@@ -342,188 +344,288 @@
     ====================================================== -->
 
       <section id="projects" class="bg-projects work-showcase">
-        <div class="container">
-          <!-- =================================================
-             PROJECT HEADING
-        ================================================== -->
+  <div class="container">
 
-          <div class="row align-items-end work-section-heading">
-            <div class="col-lg-8">
-              <h1 class="section-headline mb-3">Projects</h1>
+    <!-- =================================================
+       PROJECT HEADING
+    ================================================== -->
 
-              <h5 class="project-description mb-0">
-                Production websites, interactive interfaces, CMS experiences and
-                responsive front-end work.
-              </h5>
-            </div>
+    <div class="row align-items-end work-section-heading">
+      <div class="col-lg-8">
+        <h1 class="section-headline mb-3">Projects</h1>
 
-            <div class="col-lg-4 mt-3 mt-lg-0">
-              <p class="work-section-note mb-0">
-                Hover over a project to preview it. Scroll the list to explore
-                more, then click the preview to visit the live website.
-              </p>
-            </div>
+        <h5 class="project-description mb-0">
+          Production websites and web applications built across
+          front-end development, back-end functionality, APIs,
+          CMS platforms and responsive systems.
+        </h5>
+      </div>
+
+      <div class="col-lg-4 mt-3 mt-lg-0">
+        <p class="work-section-note mb-0">
+          Choose a category, hover over a project to preview it,
+          then click the preview to visit the live project.
+        </p>
+      </div>
+    </div>
+
+
+    <!-- =================================================
+       PROJECT TYPE TABS
+    ================================================== -->
+
+    <div
+      class="project-type-tabs"
+      role="tablist"
+      aria-label="Project categories"
+    >
+      <button
+        class="project-type-tab active"
+        type="button"
+        role="tab"
+        aria-selected="true"
+        data-project-type="websites"
+      >
+        Websites
+      </button>
+
+      <button
+        class="project-type-tab"
+        type="button"
+        role="tab"
+        aria-selected="false"
+        data-project-type="apps"
+      >
+        Web Apps
+      </button>
+    </div>
+
+
+    <hr class="text-white work-divider" />
+
+
+    <!-- =================================================
+       PROJECT ROW
+    ================================================== -->
+
+    <div class="row g-4 g-xl-5 work-project-row">
+
+      <!-- =================================================
+         LEFT PROJECT LIST
+      ================================================== -->
+
+      <div class="col-lg-5 col-xl-4 d-flex">
+
+        <div
+          class="work-project-list-wrap d-flex flex-column w-100 h-100"
+        >
+
+          <!-- =============================================
+             SCROLLABLE PROJECTS
+          ============================================== -->
+
+          <div
+            class="work-project-list flex-grow-1"
+            id="workProjectList"
+            role="tablist"
+            aria-label="Portfolio projects"
+          ></div>
+
+
+          <!-- =============================================
+             SCROLL INDICATOR
+          ============================================== -->
+
+          <div
+            class="work-scroll-hint d-flex align-items-center justify-content-between flex-shrink-0"
+          >
+            <span>
+              SCROLL FOR MORE PROJECTS
+            </span>
+
+            <span
+              class="work-scroll-arrow"
+              aria-hidden="true"
+            >
+              ↓
+            </span>
           </div>
 
-          <hr class="text-white work-divider" />
-
-          <!-- =================================================
-             IMPORTANT:
-             SAME HEIGHT PROJECT ROW
-        ================================================== -->
-
-          <div class="row g-4 g-xl-5 work-project-row">
-            <!-- =================================================
-               LEFT PROJECT LIST
-          ================================================== -->
-
-            <div class="col-lg-5 col-xl-4 d-flex">
-              <div
-                class="work-project-list-wrap d-flex flex-column w-100 h-100"
-              >
-                <!-- =============================================
-                   SCROLLABLE PROJECTS
-
-                   JavaScript automatically adds project
-                   buttons here.
-              ============================================== -->
-
-                <div
-                  class="work-project-list flex-grow-1"
-                  id="workProjectList"
-                  role="tablist"
-                  aria-label="Portfolio projects"
-                ></div>
-
-                <!-- =============================================
-                   SCROLL INDICATOR
-              ============================================== -->
-
-                <div
-                  class="work-scroll-hint d-flex align-items-center justify-content-between flex-shrink-0"
-                >
-                  <span> SCROLL FOR MORE PROJECTS </span>
-
-                  <span class="work-scroll-arrow" aria-hidden="true"> ↓ </span>
-                </div>
-              </div>
-            </div>
-
-            <!-- =================================================
-               RIGHT PROJECT PREVIEW
-          ================================================== -->
-
-            <div class="col-lg-7 col-xl-8 d-flex">
-              <article
-                class="work-project-preview w-100"
-                id="workProjectPreview"
-              >
-                <!-- =============================================
-                   PROJECT LINK / VISUAL
-              ============================================== -->
-
-                <a
-                  class="work-project-visual"
-                  id="workProjectLink"
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit project website"
-                >
-                  <!-- MOUSE GLOW -->
-
-                  <div class="work-mouse-light" id="workMouseLight"></div>
-
-                  <!-- ===========================================
-                     BROWSER WINDOW
-                ============================================ -->
-
-                  <div class="work-browser-window">
-                    <!-- BROWSER HEADER -->
-
-                    <div class="work-browser-top">
-                      <div class="work-browser-dots">
-                        <span></span>
-
-                        <span></span>
-
-                        <span></span>
-                      </div>
-
-                      <span class="work-browser-number" id="workPreviewNumber">
-                        01 / 25
-                      </span>
-                    </div>
-
-                    <!-- =========================================
-                       IMAGE
-                  ========================================== -->
-
-                    <div class="work-browser-content" id="workBrowserContent">
-                      <img
-                        id="workProjectImage"
-                        src=""
-                        alt="Project website preview"
-                      />
-
-                      <!-- FALLBACK -->
-
-                      <div class="work-project-fallback">
-                        <span id="workProjectMonogram"> LP </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- ===========================================
-                     CUSTOM MOUSE
-                ============================================ -->
-
-                  <div class="work-cursor-view" id="workCursorView">
-                    VISIT ↗
-                  </div>
-                </a>
-
-                <!-- =================================================
-                   PROJECT INFORMATION
-              ================================================== -->
-
-                <div class="row g-4 work-project-info">
-                  <div class="col-md-7">
-                    <span class="work-project-label"> LIVE WEB PROJECT </span>
-
-                    <h3 id="workPreviewTitle">Project</h3>
-
-                    <p>
-                      Select a project from the list to preview it. Click the
-                      image above to visit the live website.
-                    </p>
-                  </div>
-
-                  <div class="col-md-5">
-                    <div class="work-project-details">
-                      <!-- PROJECT -->
-
-                      <div>
-                        <span> PROJECT </span>
-
-                        <strong id="workPreviewProject"> Project </strong>
-                      </div>
-
-                      <!-- WEBSITE -->
-
-                      <div>
-                        <span> LIVE SITE </span>
-
-                        <strong id="workPreviewDomain"> Website </strong>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
         </div>
-      </section>
+      </div>
+
+
+      <!-- =================================================
+         RIGHT PROJECT PREVIEW
+      ================================================== -->
+
+      <div class="col-lg-7 col-xl-8 d-flex">
+
+        <article
+          class="work-project-preview w-100"
+          id="workProjectPreview"
+        >
+
+          <!-- =============================================
+             PROJECT LINK / VISUAL
+          ============================================== -->
+
+          <a
+            class="work-project-visual"
+            id="workProjectLink"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit project"
+          >
+
+            <!-- MOUSE GLOW -->
+
+            <div
+              class="work-mouse-light"
+              id="workMouseLight"
+            ></div>
+
+
+            <!-- ===========================================
+               BROWSER WINDOW
+            ============================================ -->
+
+            <div class="work-browser-window">
+
+              <!-- BROWSER HEADER -->
+
+              <div class="work-browser-top">
+
+                <div class="work-browser-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <span
+                  class="work-browser-number"
+                  id="workPreviewNumber"
+                >
+                  01 / 01
+                </span>
+
+              </div>
+
+
+              <!-- =========================================
+                 IMAGE
+              ========================================== -->
+
+              <div
+                class="work-browser-content"
+                id="workBrowserContent"
+              >
+
+                <img
+                  id="workProjectImage"
+                  src=""
+                  alt="Project preview"
+                />
+
+
+                <!-- FALLBACK -->
+
+                <div class="work-project-fallback">
+                  <span id="workProjectMonogram">
+                    LP
+                  </span>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- ===========================================
+               CUSTOM MOUSE
+            ============================================ -->
+
+            <div
+              class="work-cursor-view"
+              id="workCursorView"
+            >
+              VISIT ↗
+            </div>
+
+          </a>
+
+
+          <!-- =================================================
+             PROJECT INFORMATION
+          ================================================== -->
+
+          <div class="row g-4 work-project-info">
+
+            <div class="col-md-7">
+
+              <span
+                class="work-project-label"
+                id="workProjectTypeLabel"
+              >
+                LIVE WEBSITE
+              </span>
+
+              <h3 id="workPreviewTitle">
+                Project
+              </h3>
+
+              <p id="workProjectDescription">
+                Select a project from the list to preview it.
+                Click the image above to visit the live project.
+              </p>
+
+            </div>
+
+
+            <div class="col-md-5">
+
+              <div class="work-project-details">
+
+                <!-- PROJECT -->
+
+                <div>
+                  <span>
+                    PROJECT
+                  </span>
+
+                  <strong id="workPreviewProject">
+                    Project
+                  </strong>
+                </div>
+
+
+                <!-- TECHNOLOGY / TYPE -->
+
+                <div>
+                  <span id="workProjectDetailLabel">
+                    LIVE SITE
+                  </span>
+
+                  <strong id="workPreviewDomain">
+                    Website
+                  </strong>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       <!-- =====================================================
          ABOUT
@@ -552,24 +654,25 @@
             
                 <p class="about-kicker">ABOUT ME</p>
 
-                <h2 class="about-title">
-                    Front-end developer.
-  <em>Built for real-world work.</em>
+<h2 class="about-title">
+  Web developer.
+  <em>Front-end focused. Back-end capable.</em>
+</h2>
 
-                </h2>
+<p class="about-lead">
+  I’m a web developer focused on building responsive, reliable and
+  production-ready websites and web applications. My strongest
+  experience is on the front end, working with JavaScript, React,
+  HTML, CSS, Bootstrap and CMS platforms, while I also have hands-on
+  experience with Python, APIs, server-side functionality, databases
+  and deployment.
 
-                <p class="about-lead">
-                  I’m a front-end developer focused on building responsive,
-  reliable, and production-ready websites and interfaces.
-  I enjoy turning complex requirements into clean, maintainable
-  solutions using JavaScript, modern CSS, Bootstrap, React,
-  CMS platforms, and custom interactive functionality. My experience spans content-heavy websites, interactive
-  interfaces, responsive systems, custom navigation, dynamic
-  components, and ongoing production updates. My design
-  background is an added advantage, helping me deliver
-  interfaces that are not only functional, but polished
-  and intuitive.
-                </p>
+  My background also includes graphic design and marketing. I see
+  those skills as an added advantage rather than my primary role —
+  they help me understand users, visual communication and business
+  goals while keeping development, functionality and maintainable
+  code at the center of my work.
+</p>
               </div>
            
           </div>
@@ -666,18 +769,20 @@ Looking forward to hearing from you!
       <div class="container">
         <div class="portfolio-footer-inner">
           <div>
-            <strong> Luis Paredes </strong>
-
-            <span> Front-End Developer + Web Designer </span>
-          </div>
-
-          <span class="portfolio-copyright">
+             <div>
+              <span class="portfolio-copyright">
             ©
 
             <span id="year"></span>
 
-            Luis Paredes.
+            Luis Paredes
           </span>
+             </div>
+
+            <span> Web Developer</span>
+          </div>
+
+         
         </div>
       </div>
     </footer>
